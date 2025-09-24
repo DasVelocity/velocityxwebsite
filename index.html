@@ -447,7 +447,7 @@
 			font-size: 32px;
 			font-weight: 800;
 			color: var(--accent-0);
-			margin: 0 0 8px 0;
+			margi
 		}
 		.stat-label {
 			font-size: 14px;
@@ -768,6 +768,12 @@
 			}
 			.nav-links { gap: 16px; }
 		}
+
+		/* Styles for Obsidian Projection Section */
+		.center { display:flex; align-items:center; justify-content:center; height:100%; padding:1rem; box-sizing:border-box; }
+		.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+		.no-scrollbar::-webkit-scrollbar { display:none; width:0; height:0; }
+		.container-obsidian { width:100%; max-width:1100px; height:720px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius:12px; padding:12px; box-shadow:0 10px 30px rgba(2,6,23,0.6); }
 	</style>
 </head>
 <body>
@@ -805,10 +811,12 @@
 				<div class="brand">Velocity X</div>
 			</div>
 			<nav class="nav-links">
-				<a href="#">Terms Of Service</a>
-				<a href="https://discord.gg/9UuswyPTDE">Discord</a>
-				<a href="#">Orca</a>
-			</nav>
+    <a href="terms.html">Terms Of Service</a>
+    <a href="https://discord.gg/9UuswyPTDE" target="_blank" rel="noopener">Discord</a>
+    <a href="orca.html">Orca</a>
+</nav>
+
+
 		</div>
 	</header>
 
@@ -839,6 +847,19 @@
 						</svg>
 						Join Discord
 					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="center">
+				<div class="container-obsidian">
+					<Obsidian
+						title="Velocity X"
+						footer="version: v2.2 | Velocity X | Floor: Website"
+						icon="https://media.discordapp.net/attachments/1408193942930985172/1420394887471304774/logo.png?ex=68d53d52&is=68d3ebd2&hm=4302d7371cb500410dbfd4b9c249c8bbebdf4de2dfeb406e0fa4d9eba7bd176b&=&format=webp&quality=lossless"
+						ui-data-src="https://raw.githubusercontent.com/DasVelocity/Features/refs/heads/main/ObsidianExtracted.json">
+					</Obsidian>
 				</div>
 			</div>
 		</section>
@@ -1054,6 +1075,9 @@
 </style>
 
 	<canvas id="logoCanvas" width="512" height="512" style="display:none"></canvas>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<script src="https://www.mspaint.cc/widgets/obsidian.js"></script>
 
 	<script>
 		const LOADSTRING = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/DasVelocity/VelocityX/refs/heads/main/VelocityX.lua"))()';
